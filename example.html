@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="miniCaptcha/miniCaptcha.js"></script>
+	<title>miniCaptcha</title>
+	<style type="text/css">
+		.img-center{
+			text-align: center;
+		}
+		body{
+			background-color: #181A1B;
+		}
+		.bottom-extra{
+			padding-bottom: 50px;
+		}
+		.bg-header{
+			background-color: #181A1B;
+		}
+		.hr{
+			color: white;
+			background-color: white;
+			margin: .5em;
+			border-radius: 100px;
+		}
+		.total-center{
+			text-align: center;
+			vertical-align: center;
+		}
+	</style>
+</head>
+<body onload="load()">
+	<div class="card bg-dark">
+		<div class="mb-3">
+			<label for="example1" class="form-label text-white">Example Values</label>
+			<select class="form-select" aria-label="Default select example" id="example1">
+			<option selected value="example11" name="example11">Example 1.1</option>
+			<option value="example12" name="example12">Example 1.2</option>
+			<option value="example12" name="example12">Example 1.3</option>
+			</select>
+		</div>
+		<div class="mb-3">
+			<label for="example2" class="form-label text-white">Example 2</label>
+			<input type="text" name="example2" id="example2" required placeholder="example2">
+			<div id="example2Exp" class="form-text">Example Explication</div>
+		</div>
+		<div class="mb-3">
+			<label for="example3" class="form-label text-white">Fórmula:</label>
+			<input type="text" name="example3" id="example3" required placeholder="example3">
+		</div>
+		<hr class="hr">
+		<div class="mb-3">
+			<label for="userInput" class="form-label text-white">No bots allowed, do the next operation</label>
+			<input type="text" name="generatedCaptcha" id="generatedCaptcha" class="form-control" id="generatedCaptcha" disabled>
+			<input type="text" name="userInput" class="form-control bg-warning" placeholder="Answer here" id="userInput">
+			<a class="btn btn-primary btn-sm" onclick="check()">Check your answer</a>
+		</div>
+		<button type="submit" class="btn btn-primary disabled" id="finalSubmit">
+		<span>I'm a robot?</span>
+		</button>
+		</form>
+	</div>
+</body>
+</html>
